@@ -118,4 +118,10 @@ switch(argument0) {
 		instance_create_layer(x, y, "Bullets", oMissle);
 	break;
 #endregion homing
+
+#region snipe
+	case "snipe":
+		instance_create_layer(x, y, "Bullets", oSniperBullet);		
+	break;
+#endregion snipe
 }
