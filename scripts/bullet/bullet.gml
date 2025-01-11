@@ -3,6 +3,7 @@
 switch(argument0) {
 #region standard
 	case "standard":
+		oStats.coolDown = 10;
 		if (oStats.weaponPower == 0) {
 			instance_create_layer(x, y, "Instances", oBullet);	
 		}
@@ -41,6 +42,7 @@ switch(argument0) {
 
 #region spread
 	case "spread":
+		oStats.coolDown = 15;
 		if (oStats.weaponPower == 0) {
 			var a, b, c;
 			a = instance_create_layer(x, y, "Instances", oBullet);
@@ -116,11 +118,16 @@ switch(argument0) {
 #region homing
 	case "homing":
 		instance_create_layer(x, y, "Bullets", oMissle);
+		if (oStats.weaponPower <= 4) {
+			oStats.coolDown = 25 - (oStats.weaponPower * 2);
+		}
+		
 	break;
 #endregion homing
 
 #region snipe
 	case "snipe":
+		oStats.coolDown = 15;
 		instance_create_layer(x, y, "Bullets", oSniperBullet);		
 	break;
 #endregion snipe

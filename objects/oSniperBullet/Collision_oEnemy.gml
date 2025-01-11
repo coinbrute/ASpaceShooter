@@ -1,5 +1,7 @@
 with(other) {
 	hp_ -= other.damage_;
 	image_blend = c_red;
-	alarm[0] = 5;
+	image_index = 1;
+	alarm[0] = 3;
+	alarm[1] = 10
 }

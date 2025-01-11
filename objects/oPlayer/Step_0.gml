@@ -33,7 +33,7 @@ if (canShoot and shoot) {
 	bullet(bulletType);
 	effect_create_below(ef_smoke, x+8, y, .25, c_dkgray);
 	canShoot = false;
-	alarm[0] = 15;
+	alarm[0] = oStats.coolDown;
 }
 #endregion attack
 
