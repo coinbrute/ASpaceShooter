@@ -112,4 +112,10 @@ switch(argument0) {
 		}
 	break;
 #endregion spread
+
+#region homing
+	case "homing":
+		instance_create_layer(x, y, "Bullets", oMissle);
+	break;
+#endregion homing
 }
